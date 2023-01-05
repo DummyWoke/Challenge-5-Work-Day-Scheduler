@@ -14,11 +14,11 @@ N/A
 
 Example on how to use Password Generator.
 
-![alt text](assets/Usage.jpg)
+![alt text](assets/images/Usage.jpg)
 
 Preview of site function.
 
-![alt text](assets/Preview.gif)
+![alt text](assets/images/Preview.gif)
 
 ## Credits
 
