@@ -29,7 +29,7 @@ function timeTracker() {
 
     // loop over time blocks
     $(".time").each(function () {
-        var blockTime = ($(this).parent().parent().attr("id"));
+        var blockTime = parseInt($(this).parent().parent().attr("id"));
         
         console.log (blockTime)
 
