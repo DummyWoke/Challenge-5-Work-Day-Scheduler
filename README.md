@@ -12,13 +12,12 @@ N/A
 
 ## Usage
 
-Example on how to use Password Generator.
+## Example on how to use Work Day Scheduler.
 
-![alt text](../images/Usage.jpg)
+![Usage](https://user-images.githubusercontent.com/72676314/210702274-e9066cdd-85ff-4411-b3e2-654bd4c794cb.jpg)
 
-Preview of site function.
-
-![alt text](../images/Preview.gif)
+## Preview of site function.
+![Preview](https://user-images.githubusercontent.com/72676314/210702200-6361ad9e-e4f5-4e89-b27c-170ea95b3f0f.gif)
 
 ## Credits
 
@@ -32,7 +31,7 @@ https://dummywoke.github.io/Challenge-5-Work-Day-Scheduler/
 
 MIT License
 
-Copyright (c) 2022 DummyWoke
+Copyright (c) 2023 DummyWoke
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
