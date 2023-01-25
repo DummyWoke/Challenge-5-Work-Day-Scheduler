@@ -21,6 +21,7 @@ $(document).ready(function () {
     })
 })
 
+
 function timeTracker() {
     //get current number of hours.
     var timeNow = todaydate.getHours();
@@ -29,13 +30,17 @@ function timeTracker() {
 
     // loop over time blocks
     $(".time").each(function () {
-        var blockTime = parseInt($(this).parent().parent().attr("id"));
+        
+        var TimeItems = ["8AM","9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM","5PM"];
+        var TimeLength = TimeItems.length;
+
+        var blockTime = parseInt($(this).parent().parent().attr("value"));
         
         console.log (blockTime)
 
         // To check the time and add the classes for background indicators
         if (blockTime < timeNow) {
-            $(this).next().removeClass("future");
+            $(this).next().removeClass("future").prop( "disabled", true );
             $(this).next().removeClass("present");
             $(this).next().addClass("past");
         }
@@ -52,18 +57,25 @@ function timeTracker() {
         }
     })
 }
-   
-// Get item from local storage if any
-$("#8AM #event").val(localStorage.getItem("8AM"))
-$("#9AM #event").val(localStorage.getItem("9AM"))
-$("#10AM #event").val(localStorage.getItem("10AM"))
-$("#11AM #event").val(localStorage.getItem("11AM"))
-$("#12PM #event").val(localStorage.getItem("12PM"))
-$("#1PM #event").val(localStorage.getItem("1PM"))
-$("#2PM #event").val(localStorage.getItem("2PM"))
-$("#3PM #event").val(localStorage.getItem("3PM"))
-$("#4PM #event").val(localStorage.getItem("4PM"))
-$("#5PM #event").val(localStorage.getItem("5PM"))
+
+
+(function LoadItems() {
+    //Establish array and array length
+    var TimeItems = ["8AM","9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM","5PM"];
+    var TimeLength = TimeItems.length;
+    
+    //Create Loop iterations 
+    for (var i = 0; i < TimeLength; i++) {
+    
+    //Change Element Values from storage
+    $("#"+TimeItems[i]+" #event").val(localStorage.getItem(TimeItems[i]));
+    
+    console.log((TimeItems)[i]);
+    }
+    
+    })();
 
 
 timeTracker();
+
+
